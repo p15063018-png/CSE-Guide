@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — CSE Video Guide</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:,">
+</head>
+
+<body>
+  <header>
+    <h1>Contact Us</h1>
+
+    <p>
+      Have feedback, suggestions, or found an issue? Send us a message and we will
+      get back to you.
+    </p>
+
+    <div class="saved-tools">
+      <a href="index.html" class="watch-btn" style="text-decoration: none; display: inline-block;">
+        ← Back to Home
+      </a>
+    </div>
+
+    <button id="theme-toggle" type="button">🌙 Dark Mode</button>
+  </header>
+
+  <main>
+    <section class="contact-section">
+      <form id="contact-form">
+        <label for="contact-name">Your Name</label>
+        <input type="text" id="contact-name" required />
+
+        <label for="contact-email">Email</label>
+        <input type="email" id="contact-email" required />
+
+        <label for="contact-message">Message</label>
+        <textarea id="contact-message" rows="6" required></textarea>
+
+        <button type="submit" class="watch-btn">Send Message</button>
+      </form>
+
+      <p id="contact-success" class="success-message" style="display: none;">
+        Thank you! Your message has been sent.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>
+        <strong>CSE Video Guide</strong> — A learning platform for CSE students.
+      </p>
+
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <p class="footer-note">
+        Built with HTML, CSS, and JavaScript.
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    const contactForm = document.getElementById("contact-form");
+    const contactSuccess = document.getElementById("contact-success");
+
+    if (contactForm) {
+      contactForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        contactForm.style.display = "none";
+        contactSuccess.style.display = "block";
+      });
+    }
+  </script>
+</body>
+</html>

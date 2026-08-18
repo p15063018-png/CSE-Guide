@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Polytechnic Video Guide – Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:,">
+</head>
+<body>
+  <header>
+    <div class="user-info-bar">
+      <span id="user-display">Loading...</span>
+      <button id="logout-btn" type="button">Logout</button>
+    </div>
+
+    <h1>Find CSE Learning Videos</h1>
+    <p>
+      CSE Video Guide helps you quickly discover useful learning videos for your subjects.
+      Select your subject, filter by language and difficulty, and start watching the right videos.
+    </p>
+
+    <div class="saved-tools">
+      <button id="show-saved-btn" type="button">♥ Show Saved Videos</button>
+      <span id="saved-count">♥ Saved: 0</span>
+    </div>
+
+    <div class="progress-box">
+      <div class="progress-text">
+        <span id="progress-label">Learning Progress: 0 / 0 videos completed</span>
+        <span id="progress-percent">0%</span>
+      </div>
+      <div class="progress-track">
+        <div id="progress-fill"></div>
+      </div>
+    </div>
+
+    <button id="theme-toggle" type="button">🌙 Dark Mode</button>
+  </header>
+
+  <main>
+    <!-- existing subjects + videos sections exactly as before -->
+  </main>
+
+  <!-- existing details modal -->
+
+  <script src="videos.js"></script>
+  <script src="script.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>

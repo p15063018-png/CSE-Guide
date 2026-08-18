@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSE Video Guide</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:,">
+</head>
+
+<body>
+  <header>
+    <h1>Find CSE Learning Videos</h1>
+
+    <p>
+      CSE Video Guide helps you quickly discover useful learning videos for your subjects.
+      Select your subject, filter by language and difficulty, and start watching the right videos.
+    </p>
+
+    <div class="saved-tools">
+      <span id="welcome-user"></span>
+      <button id="show-saved-btn" type="button">♥ Show Saved Videos</button>
+      <span id="saved-count">♥ Saved: 0</span>
+      <button id="logout-btn" type="button">Logout</button>
+    </div>
+
+    <div class="progress-box">
+      <div class="progress-text">
+        <span id="progress-label">Learning Progress: 0 / 0 videos completed</span>
+        <span id="progress-percent">0%</span>
+      </div>
+
+      <div class="progress-track">
+        <div id="progress-fill"></div>
+      </div>
+    </div>
+
+    <button id="theme-toggle" type="button">🌙 Dark Mode</button>
+  </header>
+
+  <main>
+    <section class="subjects">
+      <div class="subject-card">
+        <h2>Python</h2>
+        <button class="view-btn" type="button">View Videos</button>
+      </div>
+
+      <div class="subject-card">
+        <h2>DBMS</h2>
+        <button class="view-btn" type="button">View Videos</button>
+      </div>
+
+      <div class="subject-card">
+        <h2>Data Structures</h2>
+        <button class="view-btn" type="button">View Videos</button>
+      </div>
+    </section>
+
+    <section id="videos-section">
+      <h2>Videos</h2>
+
+      <div id="filters">
+        <select id="subject-filter">
+          <option value="all">All Subjects</option>
+          <option value="Python">Python</option>
+          <option value="DBMS">DBMS</option>
+          <option value="Data Structures">Data Structures</option>
+        </select>
+
+        <select id="language-filter">
+          <option value="all">All Languages</option>
+          <option value="English">English</option>
+          <option value="Telugu">Telugu</option>
+          <option value="Hindi">Hindi</option>
+        </select>
+
+        <select id="difficulty-filter">
+          <option value="all">All Difficulty Levels</option>
+          <option value="Beginner">Beginner</option>
+          <option value="Intermediate">Intermediate</option>
+          <option value="Advanced">Advanced</option>
+        </select>
+
+        <select id="sort-filter">
+          <option value="default">Sort: Default</option>
+          <option value="shortest">Duration: Shortest First</option>
+          <option value="longest">Duration: Longest First</option>
+          <option value="beginner">Difficulty: Beginner First</option>
+          <option value="advanced">Difficulty: Advanced First</option>
+        </select>
+
+        <input
+          type="text"
+          id="search-box"
+          placeholder="Search by topic or title..."
+        />
+
+        <button id="clear-filters-btn" type="button">Clear Filters</button>
+      </div>
+
+      <p id="results-count">Showing 0 videos</p>
+
+      <div id="videos-container"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>
+        <strong>CSE Video Guide</strong> — A learning platform for CSE students.
+      </p>
+
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <p class="footer-note">
+        Built with HTML, CSS, and JavaScript.
+      </p>
+    </div>
+  </footer>
+
+  <div id="details-modal" class="modal">
+    <div class="modal-content">
+      <button id="close-modal-btn" type="button" aria-label="Close details">×</button>
+      <img id="modal-thumbnail" src="" alt="Video thumbnail">
+      <h2 id="modal-title"></h2>
+      <p><strong>Subject:</strong> <span id="modal-subject"></span></p>
+      <p><strong>Topic:</strong> <span id="modal-topic"></span></p>
+      <p><strong>Channel:</strong> <span id="modal-channel"></span></p>
+      <p><strong>Duration:</strong> <span id="modal-duration"></span></p>
+      <p><strong>Language:</strong> <span id="modal-language"></span></p>
+      <p><strong>Difficulty:</strong> <span id="modal-difficulty"></span></p>
+      <a id="modal-watch-btn" class="watch-btn" href="#" target="_blank">Watch Video</a>
+    </div>
+  </div>
+
+  <script src="videos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
