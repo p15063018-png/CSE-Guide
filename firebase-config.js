@@ -4,7 +4,7 @@ import { getAuth } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth
 import { getFirestore } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAf7nnX9K2K0ReopcfqziqzP5mul7kWz-4",
+  apiKey: "AIzaSyBPncOkR3VrTEAOtCJL4Cil9JYjhJMgMts"
   authDomain: "polytechnic-video-guide.firebaseapp.com",
   projectId: "polytechnic-video-guide",
   storageBucket: "polytechnic-video-guide.firebasestorage.app",
